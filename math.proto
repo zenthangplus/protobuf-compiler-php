@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package demo.math;
+
+option php_generic_services = true;
+
+service Calculator {
+    rpc Add (AddMessage) returns (AddResponse);
+    rpc Subtract (SubtractMessage) returns (SubtractResponse);
+}
+
+message AddMessage {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddResponse {
+    int32 result = 1;
+}
+
+message SubtractMessage {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message SubtractResponse {
+    int32 result = 1;
+}

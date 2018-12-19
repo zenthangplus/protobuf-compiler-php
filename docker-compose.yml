@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  complier:
+    container_name: protobuf-complier-php
+    build:
+      context: docker/php
+    volumes:
+      - .:/var/www
+    tty: true
