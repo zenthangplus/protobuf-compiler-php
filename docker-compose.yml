@@ -7,4 +7,3 @@ services:
       context: docker/php
     volumes:
       - .:/var/www
-    tty: true
